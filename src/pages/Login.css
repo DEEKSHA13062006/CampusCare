@@ -1,0 +1,1270 @@
+/* =========================================
+   CAMPUSCARE LOGIN PAGE
+========================================= */
+
+.cc-login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(440px, 0.92fr);
+  background: #ffffff;
+  color: #17243a;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================
+   LEFT BRANDING PANEL
+========================================= */
+
+.cc-login-brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 42px 8%;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(52, 107, 191, 0.35),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(79, 133, 210, 0.2),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #101e38 0%, #142c50 52%, #17365e 100%);
+}
+
+.cc-login-brand-panel::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  top: 30%;
+  right: -210px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cc-login-brand-panel::after {
+  content: "";
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  top: 24%;
+  right: -260px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cc-brand-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.cc-brand-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 49px;
+  height: 49px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 15px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.cc-brand-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.cc-brand-header p {
+  margin: 5px 0 0;
+  color: #aebfd8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.cc-brand-content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  margin: 65px 0;
+}
+
+.cc-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 100px;
+  color: #dceaff;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.cc-brand-eyebrow svg {
+  color: #91c4ff;
+}
+
+.cc-brand-content > h2 {
+  margin: 27px 0 20px;
+  color: #ffffff;
+  font-size: clamp(37px, 4vw, 57px);
+  line-height: 1.13;
+  font-weight: 750;
+  letter-spacing: -2.1px;
+}
+
+.cc-brand-content > h2 span {
+  color: #8dbdff;
+}
+
+.cc-brand-description {
+  max-width: 435px;
+  margin: 0;
+  color: #bfcee1;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.cc-brand-features {
+  display: grid;
+  gap: 23px;
+  margin-top: 42px;
+}
+
+.cc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cc-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  color: #a9ceff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cc-feature-item h3 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.cc-feature-item p {
+  margin: 0;
+  color: #aebfd8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.cc-brand-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #b7c8de;
+  font-size: 12px;
+}
+
+.cc-brand-footer svg {
+  color: #8dbdff;
+}
+
+/* =========================================
+   RIGHT LOGIN PANEL
+========================================= */
+
+.cc-login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 45px 8%;
+  background: #ffffff;
+}
+
+.cc-login-form-container {
+  width: 100%;
+  max-width: 425px;
+}
+
+.cc-login-mobile-brand {
+  display: none;
+}
+
+.cc-login-heading {
+  margin-bottom: 28px;
+}
+
+.cc-welcome-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #4775bd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cc-login-heading h2 {
+  margin: 0;
+  color: #15243b;
+  font-size: clamp(27px, 2.4vw, 34px);
+  font-weight: 750;
+  letter-spacing: -1.1px;
+  line-height: 1.25;
+}
+
+.cc-login-heading p {
+  margin: 12px 0 0;
+  color: #7b8798;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   STUDENT / FACULTY SELECTOR
+========================================= */
+
+.cc-account-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  padding: 5px;
+  margin-bottom: 27px;
+  border: 1px solid #e9edf4;
+  border-radius: 13px;
+  background: #f6f8fb;
+}
+
+.cc-account-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 47px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #718096;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cc-account-option:hover {
+  color: #254d86;
+}
+
+.cc-account-option.selected {
+  border-color: #e4ebf8;
+  color: #244f90;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(23, 45, 79, 0.07);
+}
+
+.cc-account-option:focus-visible,
+.cc-password-toggle:focus-visible,
+.cc-signin-button:focus-visible {
+  outline: 3px solid rgba(61, 119, 209, 0.28);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.cc-login-form {
+  display: grid;
+  gap: 23px;
+}
+
+.cc-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.cc-login-field > label {
+  color: #29374b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cc-login-field input {
+  width: 100%;
+  min-width: 0;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  outline: none;
+  color: #23334b;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cc-login-field input::placeholder {
+  color: #a1aaba;
+}
+
+.cc-login-field input:focus {
+  border-color: #5488d5;
+  box-shadow: 0 0 0 3px rgba(67, 123, 208, 0.1);
+}
+
+.cc-field-hint {
+  color: #8792a3;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.cc-password-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 49px;
+  padding: 0 12px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cc-password-wrapper:focus-within {
+  border-color: #5488d5;
+  box-shadow: 0 0 0 3px rgba(67, 123, 208, 0.1);
+}
+
+.cc-password-icon {
+  flex-shrink: 0;
+  color: #8793a5;
+}
+
+.cc-password-wrapper input {
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.cc-password-wrapper input:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.cc-password-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  color: #7e8ba0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cc-password-toggle:hover {
+  color: #244f90;
+  background: #f2f5fa;
+}
+
+/* =========================================
+   SIGN-IN BUTTON
+========================================= */
+
+.cc-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 51px;
+  margin-top: 3px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #244f90, #326cc0);
+  box-shadow: 0 5px 13px rgba(42, 92, 159, 0.18);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cc-signin-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(42, 92, 159, 0.24);
+}
+
+.cc-signin-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   SECURITY NOTICE
+========================================= */
+
+.cc-login-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 23px;
+  padding: 15px;
+  border: 1px solid #e1eaf7;
+  border-radius: 10px;
+  background: #f5f8fd;
+}
+
+.cc-login-security-note > svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #4676b9;
+}
+
+.cc-login-security-note p {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+}
+
+.cc-login-security-note strong {
+  color: #2b456a;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.cc-login-security-note span {
+  color: #7b8ba3;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   REGISTRATION FOOTER
+========================================= */
+
+.cc-login-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 29px;
+  color: #a2aaba;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+}
+
+.cc-login-divider::before,
+.cc-login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e9edf3;
+}
+
+.cc-register-prompt {
+  margin: 19px 0 0;
+  color: #778398;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cc-register-prompt a {
+  color: #2b61a7;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.cc-register-prompt a:hover {
+  text-decoration: underline;
+}
+
+.cc-login-terms {
+  margin: 36px 0 0;
+  color: #a3acba;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+========================================= */
+
+@media (min-width: 1500px) {
+  .cc-login-brand-panel {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  .cc-login-form-panel {
+    padding-right: 12%;
+    padding-left: 12%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cc-login-page {
+    grid-template-columns: minmax(0, 0.9fr) minmax(400px, 1.1fr);
+  }
+
+  .cc-login-brand-panel {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .cc-login-form-panel {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .cc-brand-content > h2 {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 760px) {
+  .cc-login-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .cc-login-brand-panel {
+    display: none;
+  }
+
+  .cc-login-form-panel {
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 28px 22px 35px;
+  }
+
+  .cc-login-form-container {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .cc-login-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 43px;
+    color: #172b49;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+  }
+
+  .cc-login-mobile-brand .cc-brand-icon {
+    width: 43px;
+    height: 43px;
+    border-color: #dfe8f5;
+    border-radius: 13px;
+    color: #285a9f;
+    background: #f0f5fc;
+  }
+
+  .cc-login-heading h2 {
+    font-size: 29px;
+  }
+
+  .cc-login-terms {
+    margin-top: 29px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cc-login-form-panel {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .cc-login-heading h2 {
+    font-size: 26px;
+  }
+
+  .cc-account-option {
+    gap: 6px;
+    font-size: 12px;
+  }
+}
+/* =========================================
+   CAMPUSCARE REGISTER PAGE — VISUAL POLISH
+   Preserves the existing layout and positions
+   ========================================= */
+
+/* Smooth visual transitions */
+.cc-register-panel,
+.cc-register-panel input,
+.cc-register-panel button,
+.cc-register-panel a {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Form heading */
+.cc-register-panel .cc-form-heading h2 {
+  letter-spacing: -0.8px;
+  font-weight: 750;
+}
+
+.cc-register-panel .cc-form-heading p {
+  line-height: 1.7;
+}
+
+/* Labels */
+.cc-register-panel .cc-field > label {
+  font-weight: 650;
+  letter-spacing: 0.1px;
+}
+
+/* Input fields */
+.cc-register-panel .cc-input-wrap {
+  border: 1px solid #dce3ed;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.025);
+}
+
+.cc-register-panel .cc-input-wrap:focus-within {
+  border-color: #5278e8;
+  box-shadow: 0 0 0 3px rgba(82, 120, 232, 0.12);
+}
+
+.cc-register-panel .cc-input-wrap input {
+  background: transparent;
+  outline: none;
+}
+
+.cc-register-panel .cc-input-wrap input::placeholder {
+  color: #9aa5b5;
+}
+
+/* Student and faculty selection */
+.cc-register-panel .cc-account-option {
+  border: 1px solid #dce3ed;
+  border-radius: 11px;
+  background: #ffffff;
+  font-weight: 600;
+}
+
+.cc-register-panel .cc-account-option:hover {
+  border-color: #9aafea;
+  background: #f7f9ff;
+}
+
+.cc-register-panel .cc-account-option.active {
+  border-color: #5278e8;
+  background: #f1f5ff;
+  box-shadow: inset 0 0 0 1px rgba(82, 120, 232, 0.12);
+}
+
+/* Password visibility buttons */
+.cc-register-panel .cc-password-toggle {
+  border-radius: 8px;
+}
+
+.cc-register-panel .cc-password-toggle:hover {
+  background: #f1f5fb;
+  color: #3158c8;
+}
+
+/* Main create-account button */
+.cc-register-panel .cc-primary-btn {
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-weight: 650;
+  box-shadow: 0 5px 14px rgba(43, 76, 180, 0.16);
+}
+
+.cc-register-panel .cc-primary-btn:hover {
+  box-shadow: 0 8px 20px rgba(43, 76, 180, 0.23);
+  filter: brightness(1.04);
+}
+
+.cc-register-panel .cc-primary-btn:active {
+  transform: translateY(1px);
+}
+
+/* College ID helper text */
+.cc-register-panel .cc-field-hint {
+  color: #78869b;
+  line-height: 1.5;
+}
+
+/* Verification information */
+.cc-register-panel .cc-security-note {
+  border: 1px solid #e1e9f7;
+  border-radius: 10px;
+  background: #f5f8ff;
+  padding: 12px 14px;
+  line-height: 1.55;
+}
+
+/* Login link */
+.cc-register-panel .cc-auth-switch a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cc-register-panel .cc-auth-switch a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Validation error */
+.cc-register-panel .cc-form-error {
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #b42318;
+  padding: 11px 13px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Keyboard accessibility */
+.cc-register-panel button:focus-visible,
+.cc-register-panel a:focus-visible,
+.cc-register-panel input:focus-visible {
+  outline: 2px solid #5278e8;
+  outline-offset: 3px;
+}
+
+/* Subtle polish for the branding panel */
+.cc-brand-panel .cc-brand-icon {
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.09);
+}
+
+.cc-brand-panel .cc-feature {
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.cc-brand-panel .cc-feature:hover {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cc-register-panel *,
+  .cc-brand-panel .cc-feature {
+    transition: none !important;
+  }
+}
+/* =========================================
+   CAMPUSCARE REGISTER PAGE — COMPLETE LAYOUT
+========================================= */
+
+.cc-auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 0.85fr);
+  background: #ffffff;
+  color: #17243a;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+/* LEFT BRANDING PANEL */
+
+.cc-brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 42px 9%;
+  color: white;
+  background:
+    radial-gradient(circle at 15% 85%, rgba(52,107,191,.35), transparent 38%),
+    radial-gradient(circle at 90% 15%, rgba(79,133,210,.2), transparent 32%),
+    linear-gradient(145deg, #101e38, #142c50 52%, #17365e);
+}
+
+.cc-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.cc-brand h1 {
+  margin: 0;
+  color: white;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.cc-brand p {
+  margin: 5px 0 0;
+  color: #aebfd8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.cc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 30px;
+  color: #dceaff;
+  background: rgba(255,255,255,.07);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.cc-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7dd9ad;
+}
+
+.cc-brand-content {
+  max-width: 540px;
+  margin: 55px 0;
+}
+
+.cc-brand-content h2 {
+  margin: 27px 0 18px;
+  color: white;
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+}
+
+.cc-brand-content h2 span {
+  color: #8dbdff;
+}
+
+.cc-brand-content > p {
+  max-width: 430px;
+  color: #bfcee1;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.cc-feature-list {
+  display: grid;
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.cc-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cc-feature > div:last-child {
+  display: grid;
+  gap: 5px;
+}
+
+.cc-feature strong {
+  color: white;
+  font-size: 13px;
+}
+
+.cc-feature span {
+  color: #aebfd8;
+  font-size: 11px;
+}
+
+.cc-brand-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.13);
+  color: #b7c8de;
+  font-size: 11px;
+}
+
+/* RIGHT FORM PANEL */
+
+.cc-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 35px 9%;
+  background: #ffffff;
+}
+
+.cc-form-container {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+.cc-mobile-brand {
+  display: none;
+}
+
+.cc-form-heading {
+  margin-bottom: 24px;
+}
+
+.cc-form-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #4775bd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cc-form-heading h2 {
+  margin: 0;
+  color: #15243b;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.cc-form-heading p {
+  margin: 9px 0 0;
+  color: #7b8798;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* FORM */
+
+.cc-auth-form {
+  display: grid;
+  gap: 15px;
+}
+
+.cc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.cc-field > label {
+  color: #29374b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* INPUT WRAPPERS */
+
+.cc-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #8793a5;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.cc-input-wrap:focus-within {
+  border-color: #5488d5;
+  box-shadow: 0 0 0 3px rgba(67,123,208,.1);
+}
+
+.cc-input-wrap > svg {
+  flex-shrink: 0;
+}
+
+.cc-input-wrap input {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #23334b;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.cc-input-wrap input::placeholder {
+  color: #a1aaba;
+}
+
+.cc-password-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  color: #7e8ba0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cc-password-toggle:hover {
+  color: #244f90;
+  background: #f2f5fa;
+}
+
+.cc-field-hint {
+  color: #8792a3;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* ACCOUNT TYPE */
+
+.cc-account-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cc-account-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 9px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  color: #718096;
+  background: #f8faff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.cc-account-option.active {
+  border-color: #5278e8;
+  color: #244f90;
+  background: #f1f5ff;
+}
+
+/* SUBMIT BUTTON */
+
+.cc-primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: linear-gradient(110deg, #244f90, #326cc0);
+  box-shadow: 0 5px 13px rgba(42,92,159,.18);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.cc-primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(42,92,159,.24);
+}
+
+.cc-primary-btn:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* SECURITY AND MESSAGES */
+
+.cc-security-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 13px;
+  border: 1px solid #e1eaf7;
+  border-radius: 9px;
+  background: #f5f8fd;
+  color: #4676b9;
+}
+
+.cc-security-note span {
+  color: #718096;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.cc-form-error {
+  padding: 11px 13px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  color: #b42318;
+  background: #fff5f5;
+  font-size: 12px;
+}
+
+.cc-auth-switch {
+  margin-top: 21px;
+  color: #778398;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cc-auth-switch a {
+  color: #2b61a7;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.cc-legal-note {
+  margin-top: 28px;
+  color: #a3acba;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .cc-auth-page {
+    grid-template-columns: minmax(0, 0.9fr) minmax(450px, 1.1fr);
+  }
+
+  .cc-brand-panel {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .cc-form-panel {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+
+@media (max-width: 760px) {
+  .cc-auth-page {
+    display: block;
+  }
+
+  .cc-brand-panel {
+    display: none;
+  }
+
+  .cc-form-panel {
+    min-height: 100vh;
+    align-items: flex-start;
+    padding: 25px 22px 35px;
+  }
+
+  .cc-form-container {
+    max-width: 460px;
+  }
+
+  .cc-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 30px;
+    color: #172b49;
+    font-size: 21px;
+    font-weight: 800;
+  }
+
+  .cc-mobile-brand .cc-brand-icon {
+    width: 43px;
+    height: 43px;
+    border-color: #dfe8f5;
+    color: #285a9f;
+    background: #f0f5fc;
+  }
+
+  .cc-form-heading h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cc-form-panel {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .cc-account-option {
+    gap: 5px;
+    font-size: 11px;
+  }
+}
+
