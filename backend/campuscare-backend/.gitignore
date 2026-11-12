@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Sensitive Spring Boot configuration
+**/application.properties
+!**/application-example.properties
+
+# Uploaded user files
+/uploads/

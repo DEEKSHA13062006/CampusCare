@@ -17,3 +17,9 @@ application-secret.properties
 
 # Logs
 *.log
+# Sensitive Spring Boot configuration
+**/application.properties
+!**/application-example.properties
+
+# Uploaded files
+/backend/campuscare-backend/uploads/
