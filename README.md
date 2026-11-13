@@ -211,3 +211,22 @@ http://localhost:5173
 ---
 
 Developed as an academic software engineering project.
+## Screenshots
+
+### Login
+![CampusCare Login](docs/screenshots/login.png)
+
+### Student Dashboard
+![Student Dashboard](docs/screenshots/student-dashboard.png)
+
+### Report an Issue
+![Report Issue](docs/screenshots/report-issue.png)
+
+### My Reports
+![My Reports](docs/screenshots/my-reports.png)
+
+### Admin Dashboard
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+
+### Admin Reports
+![Admin Reports](docs/screenshots/admin-reports.png)
